@@ -1,4 +1,4 @@
-
+//here sum method array is used other than sum which i used and len is done by index
 #include <bits/stdc++.h>
 using namespace std;
  
