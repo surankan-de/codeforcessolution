@@ -1,11 +1,29 @@
 // Online C compiler to run C program online
 #include <stdio.h>
-
-int main() {
-    typedef struct lol{
+typedef struct lol{
         int x;
         struct lol *next;
-    }node;
+    }node;  
+
+void add (node *head,int y)
+{
+   node * adde = (node *)malloc(sizeof(node)) ;
+   adde->x =y;
+   adde->next = NULL;
+   
+   node *ptr = (node *)malloc(sizeof(node));
+   ptr = head;
+   while(ptr->next!=NULL)
+   {
+       ptr = ptr->next;
+   }
+   
+   ptr->next = adde;
+   
+}
+
+int main() {
+    
     
     node *head,*tmp,*prev;
     
@@ -30,8 +48,9 @@ int main() {
             prev = tmp;
         }
     }
+    add(head,6);
     
-    for(int i =0;i<5;i++)
+    for(int i =0;i<6;i++)
     {
         if(i==0)
         {
